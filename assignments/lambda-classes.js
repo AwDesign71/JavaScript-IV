@@ -9,3 +9,14 @@ class Person {
         console.log()
     }
 }
+
+class Instructor {
+  constructor(instructorarrts) {
+      this.specialty = instructorarrts.specialty;
+      this.favLanguage = instructorarrts.favLanguage;
+      this.catchPhrase = instructorarrts.catchPhrase;
+  }
+  demo(subject) {
+    console.log();
+  }
+}
