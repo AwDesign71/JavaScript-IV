@@ -98,3 +98,25 @@ const Ricky = new Student({
     className: 'Web21',
     favSubjects: ['React', 'java', 'Html']
 })
+//PM objects
+const Terry = new ProjectManagers({
+ name: 'Terry',
+ age: '44',
+ location: 'Charlotte',
+ gradClassName: 'Web21',
+ favInstructor: 'Rebbecca',
+});
+const Timmy = new ProjectManagers({
+    name: 'Timmy',
+    age: '34',
+    location: 'Charleston',
+    gradClassName: 'Web21',
+    favInstructor: 'Lisa'
+   });
+   const Sandy = new ProjectManagers({
+    name: 'Sandy',
+    age: '44',
+    location: 'Brooklyn',
+    gradClassName: 'Web21',
+    favInstructor: 'Gabe'
+   });
