@@ -48,3 +48,28 @@ class ProjectManagers extends Instructor {
         return `${this.name} debugs ${this.student.name}'s code on ${this.subject}`;
     }
 }
+
+const Chuck = new Instructor({
+    name: 'Chuck',
+    age: '45',
+    location: 'Atlanta',
+    specialty: 'Java',
+    favLanguage: 'PHP',
+    catchPhrase: 'It\'s not impossible to achive your goals.'
+});
+const Lisa = new Instructor({
+    name: 'Lisa',
+    age: '47',
+    location: 'Newark',
+    specialty: 'CSS',
+    favLanguage: 'JavaScript',
+    catchPhrase: 'Hard is the key to success.'
+});
+const Gabe = new Instructor({
+    name: 'Gabe',
+    age: '38',
+    location: 'Miami',
+    specialty: 'Ruby',
+    favLanguage: 'SQL',
+    catchPhrase: 'There is no such things a perfect programmer.'
+});
