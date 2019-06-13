@@ -32,7 +32,10 @@ class Student extends Person {
       this.favSubjects = studentArrts.favLanguage;
     }
     listsSubjects() {
-        return `${this.favSubjects}`;
+        for(let i=0; i < this.favSubjects.length; i++) {
+            console.log(this.favSubjects[i]);
+        }
+        
     }
     PRAssignment(subject) {
         return `${this.name} has submitted a PR for ${subject}`;
@@ -127,6 +130,6 @@ const timmy = new ProjectManagers({
     favInstructor: 'Gabe'
    });
    //Console log the outputs
-   console.log(rebbecca.sprintChallenge('JavaScript'));
+   console.log(rebbecca.listsSubjects());
    console.log(gabe.speak('Miami'));
    console.log(sandy.standUp('Web21'));
