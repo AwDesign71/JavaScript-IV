@@ -44,18 +44,16 @@ constructor(arg) {
    class CharacterStats extends GameObject {
        constructor(characterArg) {
            super(characterArg);
-        this.healthPoints = arg.healthPoints;
-        this.name = arg.name;
-     GameObject.call(this, arg);
+        this.healthPoints = characterArg.healthPoints;
+        this.name = characterArg.name;
        }
-     
+       takeDamage() {
+        return `${this.name} toke damage.`
+     }
    }
   
-   CharacterStats.prototype = Object.create(GameObject.prototype);
   
-   CharacterStats.prototype.takeDamage = function() {
-      return `${this.name} toke damage.`
-   }
+  
   /*
     === Humanoid (Having an appearance or character resembling that of a human.) ===
     * team
@@ -65,11 +63,16 @@ constructor(arg) {
     * should inherit destroy() from GameObject through CharacterStats
     * should inherit takeDamage() from CharacterStats
   */
-   function Humanoid(arg) {
-     this.team = arg.team;
-     this.weapons = arg.weapons;
-     this.language = arg.language;
-     CharacterStats.call(this, arg);
+   class Humanoid extends CharacterStats {
+       constructor(humanoidArg) {
+           super(humanoidArg);
+        this.team = humanoidArg.team;
+        this.weapons = humanoidArg.weapons;
+        this.language = humanoidArg.language;
+       }
+       greet() {
+        return `${this.name} ${this.language}`;
+      }
    }
    
   /*
@@ -77,11 +80,9 @@ constructor(arg) {
     * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
     * Instances of CharacterStats should have all of the same properties as GameObject.
   */
-  Humanoid.prototype = Object.create(GameObject.prototype);
-  Humanoid.prototype = Object.create(CharacterStats.prototype)
-  Humanoid.prototype.greet = function() {
-    return `${this.name} ${this.language}`;
-  }
+  /* Humanoid.prototype = Object.create(GameObject.prototype);
+  Humanoid.prototype = Object.create(CharacterStats.prototype) */
+  
   // Test you work by un-commenting these 3 objects and the list of console logs below:
   
   
