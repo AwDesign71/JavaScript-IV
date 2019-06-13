@@ -11,7 +11,7 @@ class Person {
 }
 
 class Instructor extends Person {
-  constructor() {
+  constructor(instructorArrts) {
     super(instructorArrts);
         this.specialty = instructorArrts.specialty;
         this.favLanguage = instructorArrts.favLanguage;
@@ -34,22 +34,28 @@ class Student extends Person {
     listsSubjects() {
         return `${this.favSubjects}`;
     }
+    PRAssignment(subject) {
+        return `${this.name} has submitted a PR for ${subject}`;
+    }
+    sprintChallenge(subject) {
+        return `${this.name} has begun sprint challenge on ${subject}`;
+    }
 }
 class ProjectManagers extends Instructor {
-    constructor(instructorArrts) {
-        super(instructorArrts);
-        this.gradClassName = instructorArrts.gradClassName;
-        this.favInstructor = instructorArrts.favInstructor;
+    constructor(pmArrts) {
+        super(pmArrts);
+        this.gradClassName = pmArrts.gradClassName;
+        this.favInstructor = pmArrts.favInstructor;
     }
-    standUp() {
-        return `${this.name} announces to ${this.channel}, @channel standy times`;
+    standUp(channel) {
+        return `${this.name} announces to ${channel}, @channel standy times`;
     }
     debugsCode(student, object) {
-        return `${this.name} debugs ${this.student.name}'s code on ${this.subject}`;
+        return `${this.studnet} debugs ${this.student}'s code on ${this.subject}`;
     }
 }
 //Objects for Instructors
-const Chuck = new Instructor({
+const chuck = new Instructor({
     name: 'Chuck',
     age: '45',
     location: 'Atlanta',
@@ -57,7 +63,7 @@ const Chuck = new Instructor({
     favLanguage: 'PHP',
     catchPhrase: 'It\'s not impossible to achive your goals.'
 });
-const Lisa = new Instructor({
+const lisa = new Instructor({
     name: 'Lisa',
     age: '47',
     location: 'Newark',
@@ -65,7 +71,7 @@ const Lisa = new Instructor({
     favLanguage: 'JavaScript',
     catchPhrase: 'Hard is the key to success.'
 });
-const Gabe = new Instructor({
+const gabe = new Instructor({
     name: 'Gabe',
     age: '38',
     location: 'Miami',
@@ -74,7 +80,7 @@ const Gabe = new Instructor({
     catchPhrase: 'There is no such things a perfect programmer.'
 });
 //Obects for Students
-const Rebbecca = new Student({
+const rebbecca = new Student({
     name: 'Rebbecca',
     age: '28',
     location: 'Richmond',
@@ -82,7 +88,7 @@ const Rebbecca = new Student({
     className: 'Web21',
     favSubjects: ['HTML', 'CSS', 'Jquery']
 })
-const Sherry = new Student({
+const sherry = new Student({
     name: 'Sherry',
     age: '33',
     location: 'Oakland',
@@ -90,7 +96,7 @@ const Sherry = new Student({
     className: 'Web21',
     favSubjects: ['Bootstrap', 'Node.js', 'React']
 })
-const Ricky = new Student({
+const ricky = new Student({
     name: 'Ricky',
     age: '22',
     location: 'Houston',
@@ -99,24 +105,28 @@ const Ricky = new Student({
     favSubjects: ['React', 'java', 'Html']
 })
 //PM objects
-const Terry = new ProjectManagers({
+const terry = new ProjectManagers({
  name: 'Terry',
  age: '44',
  location: 'Charlotte',
  gradClassName: 'Web21',
- favInstructor: 'Rebbecca',
+ favInstructor: 'Chuck',
 });
-const Timmy = new ProjectManagers({
+const timmy = new ProjectManagers({
     name: 'Timmy',
     age: '34',
     location: 'Charleston',
     gradClassName: 'Web21',
     favInstructor: 'Lisa'
    });
-   const Sandy = new ProjectManagers({
+   const sandy = new ProjectManagers({
     name: 'Sandy',
     age: '44',
     location: 'Brooklyn',
     gradClassName: 'Web21',
     favInstructor: 'Gabe'
    });
+   //Console log the outputs
+   console.log(rebbecca.sprintChallenge('JavaScript'));
+   console.log(gabe.speak('Miami'));
+   console.log(sandy.standUp('Web21'));
