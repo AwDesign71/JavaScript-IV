@@ -48,7 +48,7 @@ class ProjectManagers extends Instructor {
         return `${this.name} debugs ${this.student.name}'s code on ${this.subject}`;
     }
 }
-
+//Objects for Instructors
 const Chuck = new Instructor({
     name: 'Chuck',
     age: '45',
@@ -73,3 +73,28 @@ const Gabe = new Instructor({
     favLanguage: 'SQL',
     catchPhrase: 'There is no such things a perfect programmer.'
 });
+//Obects for Students
+const Rebbecca = new Student({
+    name: 'Rebbecca',
+    age: '28',
+    location: 'Richmond',
+    previousBackground: 'Nursing',
+    className: 'Web21',
+    favSubjects: ['HTML', 'CSS', 'Jquery']
+})
+const Sherry = new Student({
+    name: 'Sherry',
+    age: '33',
+    location: 'Oakland',
+    previousBackground: 'Home-care',
+    className: 'Web21',
+    favSubjects: ['Bootstrap', 'Node.js', 'React']
+})
+const Ricky = new Student({
+    name: 'Ricky',
+    age: '22',
+    location: 'Houston',
+    previousBackground: 'Fast Food',
+    className: 'Web21',
+    favSubjects: ['React', 'java', 'Html']
+})
