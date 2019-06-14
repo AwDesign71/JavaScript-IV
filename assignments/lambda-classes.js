@@ -29,11 +29,11 @@ class Student extends Person {
         super(studentArrts);
       this.previousBackground = studentArrts.previousBackground;
       this.className = studentArrts.className;
-      this.favSubjects = studentArrts.favLanguage;
+      this.favSubjects = studentArrts.favSubjects;
     }
     listsSubjects() {
         for(let i=0; i < this.favSubjects.length; i++) {
-            console.log(this.favSubjects[i]);
+            console.log(`${this.favSubjects[i]}`);
         }
         
     }
@@ -130,6 +130,6 @@ const timmy = new ProjectManagers({
     favInstructor: 'Gabe'
    });
    //Console log the outputs
-   console.log(rebbecca.listsSubjects());
+   rebbecca.listsSubjects();
    console.log(gabe.speak('Miami'));
    console.log(sandy.standUp('Web21'));
